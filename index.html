@@ -11,9 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
-    body, h1, h2, h3, p, strong, small, span, button, a {
-      word-break: keep-all;
-      overflow-wrap: break-word;
+    body,
+    body * {
+      word-break: keep-all !important;
+      overflow-wrap: normal !important;
+      word-wrap: normal !important;
+      hyphens: none !important;
+      -webkit-hyphens: none !important;
     }
   </style>
 </head>
