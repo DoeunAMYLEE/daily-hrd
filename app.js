@@ -12,15 +12,19 @@ function localToday(){
   const d = String(now.getDate()).padStart(2,'0');
   return `${y}-${m}-${d}`;
 }
-function latestForToday(items){
+function publishedItems(items){
   const today = localToday();
-  const eligible = items.filter(x => x.date <= today).sort((a,b)=>b.date.localeCompare(a.date));
-  return eligible[0] || [...items].sort((a,b)=>b.date.localeCompare(a.date))[0];
+  return items.filter(x => x.date <= today);
+}
+function latestForToday(items){
+  const eligible = publishedItems(items).sort((a,b)=>b.date.localeCompare(a.date));
+  return eligible[0] || null;
 }
 function escapeHTML(str){
   return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
 }
 function renderBriefing(item){
+  if(!item) return;
   state.current = item;
   document.title = `${item.title} | Daily HRD`;
   document.getElementById('todayLabel').textContent = formatDate(item.date, item.weekday);
@@ -66,7 +70,9 @@ function renderBriefing(item){
 function renderArchive(items){
   const list = document.getElementById('archiveList');
   const currentDate = state.current?.date;
-  const filtered = items.filter(x=>x.date !== currentDate).sort((a,b)=>b.date.localeCompare(a.date));
+  const filtered = publishedItems(items)
+    .filter(x=>x.date !== currentDate)
+    .sort((a,b)=>b.date.localeCompare(a.date));
   list.innerHTML = filtered.map(item=>`
     <button class="archive-item" data-date="${item.date}">
       <span class="mini-date">${formatDate(item.date,item.weekday)}</span>
@@ -75,16 +81,18 @@ function renderArchive(items){
     </button>`).join('');
   list.querySelectorAll('.archive-item').forEach(btn=>{
     btn.addEventListener('click',()=>{
-      const found = state.briefings.find(x=>x.date===btn.dataset.date);
+      const found = publishedItems(state.briefings).find(x=>x.date===btn.dataset.date);
+      if(!found) return;
       renderBriefing(found);
       renderArchive(filterItems(document.getElementById('searchInput').value));
     });
   });
 }
 function filterItems(query){
+  const visible = publishedItems(state.briefings);
   const q = query.trim().toLowerCase();
-  if(!q) return state.briefings;
-  return state.briefings.filter(x =>
+  if(!q) return visible;
+  return visible.filter(x =>
     [x.title,x.category,x.bite_term,...x.tags,...x.summary].join(' ').toLowerCase().includes(q)
   );
 }
@@ -111,10 +119,24 @@ async function shareCurrent(){
 async function init(){
   const res=await fetch('data/briefings.json',{cache:'no-store'});
   state.briefings=await res.json();
+  const visible = publishedItems(state.briefings);
   const hash=location.hash.replace('#','');
-  state.current=state.briefings.find(x=>x.date===hash) || latestForToday(state.briefings);
+  const requested = visible.find(x=>x.date===hash);
+  state.current=requested || latestForToday(state.briefings);
+
+  // If someone opens a future/unpublished date URL, remove the future hash
+  // and show the latest published briefing instead.
+  if(hash && !requested){
+    history.replaceState(null,'',location.pathname + location.search);
+  }
+
+  if(!state.current){
+    document.getElementById('currentBriefing').innerHTML='<div class="briefing-body"><p>아직 공개된 HRD 브리핑이 없습니다.</p></div>';
+    renderArchive([]);
+    return;
+  }
   renderBriefing(state.current);
-  renderArchive(state.briefings);
+  renderArchive(visible);
 }
 document.getElementById('shareBtn').addEventListener('click',shareCurrent);
 document.getElementById('searchInput').addEventListener('input',e=>renderArchive(filterItems(e.target.value)));
@@ -126,8 +148,19 @@ document.querySelectorAll('#rating button').forEach(btn=>{
 });
 window.addEventListener('hashchange',()=>{
   const hash=location.hash.replace('#','');
-  const found=state.briefings.find(x=>x.date===hash);
-  if(found){ renderBriefing(found); renderArchive(state.briefings); }
+  const visible = publishedItems(state.briefings);
+  const found=visible.find(x=>x.date===hash);
+  if(found){
+    renderBriefing(found);
+    renderArchive(filterItems(document.getElementById('searchInput').value));
+  } else if(hash){
+    const latest = latestForToday(state.briefings);
+    history.replaceState(null,'',location.pathname + location.search);
+    if(latest){
+      renderBriefing(latest);
+      renderArchive(filterItems(document.getElementById('searchInput').value));
+    }
+  }
 });
 init().catch(err=>{
   document.getElementById('currentBriefing').innerHTML=`<div class="briefing-body"><p>브리핑을 불러오지 못했습니다.</p><pre>${escapeHTML(err.message)}</pre></div>`;
