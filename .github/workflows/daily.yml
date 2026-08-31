@@ -1,0 +1,44 @@
+name: Daily HRD Briefing
+
+on:
+  schedule:
+    # GitHub Actions cron uses UTC.
+    # 23:30 UTC = 08:30 KST the next day.
+    - cron: "30 23 * * 0-4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-daily-briefing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate today's briefing
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-5.6-luna
+        run: python scripts/generate_briefing.py
+
+      - name: Commit new briefing
+        run: |
+          git config user.name "daily-hrd-bot"
+          git config user.email "daily-hrd-bot@users.noreply.github.com"
+          git add data/briefings.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Daily HRD: $(date -u +%F)"
+            git push
+          fi
