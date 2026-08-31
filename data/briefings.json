@@ -1,0 +1,112 @@
+[
+  {
+    "date": "2026-08-31",
+    "weekday": "월",
+    "category": "HRD Trend",
+    "title": "교육시간은 늘었는데, 교육비는 줄었다? — 2026 기업교육의 변화",
+    "summary": [
+      "ATD의 2026 State of the Industry 자료에서는 직원 1인당 공식 학습시간이 전년보다 늘어난 반면, 직접 교육비는 감소한 흐름이 나타났습니다.",
+      "이는 기업이 학습 자체를 줄이기보다 가상교육·운영 효율화 등을 통해 더 적은 비용으로 더 많은 학습기회를 제공하려는 방향으로 해석할 수 있습니다.",
+      "동시에 구성원의 Skill Gap 해소와 교육목표를 조직의 목표에 연결하는 일이 L&D의 중요한 과제로 부상하고 있습니다. 앞으로 HRD는 ‘얼마나 교육했는가’보다 ‘교육으로 무엇이 달라졌는가’를 설명하는 역할이 더 중요해질 수 있습니다."
+    ],
+    "bite_term": "Learning Impact",
+    "bite_definition": "교육 만족도나 수료율을 넘어, 학습이 실제 업무수행과 조직 성과에 어떤 변화를 만들었는지 확인하는 관점입니다.",
+    "bite_line": "“얼마나 교육했는가?”에서 “교육으로 무엇이 달라졌는가?”로.",
+    "source_name": "ATD",
+    "source_title": "2026 State of the Industry: Talent Development Benchmarks and Trends",
+    "source_url": "https://www.td.org/product/research-report--2026-state-of-the-industry/792605",
+    "tags": [
+      "HRD Trend",
+      "Learning Impact",
+      "L&D"
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "weekday": "화",
+    "category": "국내 HRD",
+    "title": "국내 기업 교육담당자들이 주목하는 2026 기업교육 방향",
+    "summary": [
+      "국내 기업교육에서는 AI 교육의 비중이 빠르게 커지고 있지만, 교육방식이 모두 온라인으로 이동하고 있는 것은 아닙니다.",
+      "오히려 지식 전달은 디지털 채널로 효율화하고, 토론·실습·관계 형성이 필요한 학습은 오프라인에서 강화하는 식으로 목적에 따른 학습경험 설계가 중요해지고 있습니다.",
+      "즉 앞으로는 온라인과 오프라인 중 하나를 선택하기보다, 학습목표에 맞게 두 방식을 조합하는 Blended Learning 설계 역량이 더욱 중요해질 수 있습니다."
+    ],
+    "bite_term": "Blended Learning",
+    "bite_definition": "온라인과 오프라인을 단순 병행하는 것이 아니라, 각 방식의 강점을 학습목표에 맞게 하나의 학습경험으로 설계하는 방식입니다.",
+    "bite_line": "지식 습득은 온라인으로, 토론과 실습은 오프라인으로 설계할 수도 있습니다.",
+    "source_name": "휴넷",
+    "source_title": "2026년 기업교육 전망 관련 HRD Trend 자료",
+    "source_url": "https://hrd.hunet.co.kr/Trend/",
+    "tags": [
+      "국내 HRD",
+      "Blended Learning",
+      "기업교육"
+    ]
+  },
+  {
+    "date": "2026-09-02",
+    "weekday": "수",
+    "category": "AI × HRD",
+    "title": "AI가 교육자료를 순식간에 만든다면, HRD 담당자는 무엇을 해야 할까?",
+    "summary": [
+      "생성형 AI는 교육과정 개요, 스토리보드, 퀴즈, 강의자료 초안까지 빠르게 만들 수 있게 했습니다. 이에 따라 L&D의 병목은 ‘콘텐츠 제작’에서 ‘콘텐츠 검증’으로 이동하고 있다는 관점이 제시됩니다.",
+      "AI가 만든 결과물이 보기에는 그럴듯하더라도 사실이 정확한지, 실제 현업과 맞는지, 학습목표에 적절한지에 대한 사람의 판단은 여전히 필요합니다.",
+      "따라서 AI 활용이 늘수록 HRD 담당자의 역할은 줄어드는 것이 아니라 콘텐츠 제작자에서 큐레이터·검증자·학습설계자로 확장될 가능성이 있습니다."
+    ],
+    "bite_term": "H-AI-H (Human-AI-Human)",
+    "bite_definition": "사람이 방향과 기준을 설정하고, AI가 작업을 지원한 뒤, 다시 사람이 검증하고 최종 판단하는 협업 방식입니다.",
+    "bite_line": "AI가 초안을 만들 수는 있지만, 최종 품질에 대한 책임은 사람에게 있습니다.",
+    "source_name": "ATD",
+    "source_title": "The New L&D Bottleneck: Why AI Quality Assurance Is Your Most Critical Capability",
+    "source_url": "https://www.td.org/content/atd-blog/the-new-l-and-d-bottleneck-why-ai-quality-assurance-is-your-most-critical-capability",
+    "tags": [
+      "AI × HRD",
+      "AI Quality",
+      "Learning Design"
+    ]
+  },
+  {
+    "date": "2026-09-03",
+    "weekday": "목",
+    "category": "타사 HRD Case",
+    "title": "교육 프로그램보다 ‘학습하는 문화’를 만든 Teradata",
+    "summary": [
+      "Teradata는 AI 시대에 대응하기 위해 단순히 새로운 교육과정을 늘리기보다, 구성원이 스스로 학습하고 성장하는 Growth Culture를 만드는 데 초점을 두었습니다.",
+      "전 직원에게 공통적인 AI 기반을 제공하면서도 이후 학습은 직무 특성에 맞게 차별화하고, 관리자 간 사례 공유와 정기적인 성장 대화를 통해 업무와 학습을 연결했습니다.",
+      "이 사례는 교육을 별도의 이벤트로 운영하기보다 실제 업무 안에서 지속적으로 학습이 일어나는 구조를 만드는 것이 HRD의 중요한 역할이 될 수 있음을 보여줍니다."
+    ],
+    "bite_term": "Learning in the Flow of Work",
+    "bite_definition": "교육을 위해 업무에서 벗어나기보다, 실제 업무를 수행하는 과정에서 필요한 지식과 도움을 바로 학습할 수 있도록 지원하는 방식입니다.",
+    "bite_line": "학습을 ‘교육시간’에만 일어나게 하지 않는 것이 핵심입니다.",
+    "source_name": "LinkedIn Talent Blog",
+    "source_title": "How Teradata Built Growth Culture to Power AI Innovation",
+    "source_url": "https://www.linkedin.com/business/talent/blog/learning-and-development/teradata-growth-culture-powering-ai-innovation",
+    "tags": [
+      "타사 사례",
+      "Growth Culture",
+      "Learning in Work"
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "weekday": "금",
+    "category": "Learning Curation",
+    "title": "기업이 지원하는 학습은 이제 ‘사내교육’만을 의미하지 않는다",
+    "summary": [
+      "기업의 Professional Development는 정규 사내교육뿐 아니라 외부 컨퍼런스, 온라인 학습 서비스, 전문가 커뮤니티 등 다양한 학습자원을 연결하는 방향으로 넓어지고 있습니다.",
+      "필요한 Skill의 변화 속도가 빨라질수록 모든 콘텐츠를 HRD가 직접 만드는 방식에는 한계가 있습니다. 어떤 콘텐츠를 만들 것인지와 함께, 이미 존재하는 좋은 학습자원을 빠르게 발견하고 필요한 구성원에게 연결하는 역할이 중요해집니다.",
+      "즉 콘텐츠가 많아지는 시대에는 HRD의 ‘제작 역량’만큼 ‘큐레이션 역량’도 핵심이 될 수 있습니다."
+    ],
+    "bite_term": "Learning Curation",
+    "bite_definition": "HRD 담당자가 모든 교육 콘텐츠를 직접 만드는 대신 조직과 구성원에게 필요한 양질의 학습자원을 발견·선별하고 적절하게 연결하는 활동입니다.",
+    "bite_line": "무엇을 만들 것인가만큼, 무엇을 골라줄 것인가도 중요해집니다.",
+    "source_name": "ATD",
+    "source_title": "Employer-Sponsored Professional Development",
+    "source_url": "https://www.td.org/product/research-report--employer-sponsored-professional-development/792608",
+    "tags": [
+      "Learning Curation",
+      "Professional Development",
+      "HRD"
+    ]
+  }
+]
