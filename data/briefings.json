@@ -18,34 +18,28 @@
     "source_name": "ATD Research",
     "source_title": "2026 State of the Industry: Talent Development Benchmarks and Trends",
     "source_url": "https://www.td.org/product/research-report--2026-state-of-the-industry/792605",
-    "tags": [
-      "HRD Trend",
-      "Learning Impact",
-      "L&D",
-      "ATD"
-    ]
+    "tags": ["HRD Trend", "Learning Impact", "L&D", "ATD"]
   },
   {
     "date": "2026-09-01",
     "weekday": "화",
     "category": "국내 HRD",
-    "title": "국내 기업 교육담당자들이 주목하는 2026 기업교육 방향",
+    "title": "온라인이면 충분할까? — 2026 기업교육에서 다시 주목받는 ‘학습 방식의 조합’",
     "summary": [
-      "국내 기업교육에서는 AI 교육의 비중이 빠르게 커지고 있지만, 교육방식이 모두 온라인으로 이동하고 있는 것은 아닙니다.",
-      "오히려 지식 전달은 디지털 채널로 효율화하고, 토론·실습·관계 형성이 필요한 학습은 오프라인에서 강화하는 식으로 목적에 따른 학습경험 설계가 중요해지고 있습니다.",
-      "즉 앞으로는 온라인과 오프라인 중 하나를 선택하기보다, 학습목표에 맞게 두 방식을 조합하는 Blended Learning 설계 역량이 더욱 중요해질 수 있습니다."
+      "AI와 디지털 학습이 빠르게 확산되면서 기업교육 역시 온라인 중심으로 이동할 것 같지만, 실제 국내 기업들의 선택은 조금 다르게 나타나고 있습니다. 휴넷이 2025년 11월 371개 기업의 교육담당자를 대상으로 조사한 결과, 2026년에 계획하고 있는 직원교육 형태로 오프라인 집합교육 66.6%, 온라인 교육 54.2%, 하이브리드 교육 29.6%, 구독형 교육 18.3%가 선택됐습니다. 복수응답 조사이기 때문에 한 기업이 여러 교육방식을 함께 계획할 수 있다는 점이 핵심입니다. 즉 기업들이 온라인과 오프라인 중 하나를 고르기보다 여러 학습방식을 함께 가져가고 있다는 모습에 가깝습니다.",
+      "같은 조사에서 2026년 가장 중점을 둘 교육 분야로는 AI 교육이 50.9%로 1위였고, 전문 직무교육 38.3%, 공통역량 교육 29.9%, 핵심인재 교육 27.2%가 뒤를 이었습니다. AI 교육을 전년보다 확대하겠다는 응답도 53.9%였습니다. 흥미로운 점은 교육 콘텐츠는 AI·디지털 중심으로 빠르게 변화하는데, 교육 전달방식은 오히려 오프라인까지 포함해 다양해지고 있다는 것입니다. 새로운 기술이 등장했다고 해서 모든 학습을 디지털로 바꾸는 것이 아니라, 무엇을 배우느냐에 따라 적합한 방식을 다시 선택하고 있는 것으로 볼 수 있습니다.",
+      "이러한 흐름은 국내 조사에만 나타나는 것은 아닙니다. CIPD는 Workplace Learning 방법을 설명하면서 학습방식을 선택할 때 하나의 방법을 일괄 적용하기보다 학습목표와 상황에 맞는 다양한 방법을 활용하는 것이 중요하다고 설명합니다. Blended Learning 역시 오프라인 수업과 디지털 학습을 단순히 함께 제공하는 것을 넘어, 서로 다른 학습방식의 강점을 조합하는 접근입니다. 온라인 학습은 시간과 장소의 유연성과 자기주도적 학습에 장점이 있는 반면, 동시적 학습은 즉각적인 피드백과 상호작용을 제공할 수 있습니다.",
+      "예를 들어 개념과 사전지식은 온라인 콘텐츠로 먼저 익히고, 실제 교육장에서는 토론·사례분석·Role Play·실습과 같이 다른 사람과의 상호작용이 중요한 활동에 시간을 사용할 수 있습니다. 교육 이후에는 다시 디지털 콘텐츠나 현업 과제를 통해 배운 내용을 반복하거나 적용하도록 연결할 수도 있습니다. ATD 역시 Virtual Instructor-Led Training을 설명하면서 사전에 영상이나 자료를 학습한 뒤 라이브 세션에서 더 깊은 토론을 진행하는 방식처럼, 동기식 학습과 비동기식 학습을 하나의 프로그램으로 연결하는 설계를 제시합니다.",
+      "실제 기업교육에서도 비슷한 패턴을 확인할 수 있습니다. ATD가 소개한 242명의 Sales Professional 대상 연구에서는 효과성이 높은 영업교육 조직의 93%가 대면 Instructor-Led Training을 포함하고 있었으며, 동시에 66%는 Virtual Instructor-Led Training, 50%는 Self-Study를 함께 활용했습니다. 다만 이 결과는 영업교육에 한정된 조사이므로 모든 기업교육에 그대로 일반화할 수는 없습니다. 그럼에도 효과적인 학습이 반드시 하나의 방식으로 이루어지는 것은 아니라는 점은 확인할 수 있습니다.",
+      "결국 2026년 HRD에서 중요한 질문은 ‘온라인으로 할까, 오프라인으로 할까?’가 아니라 ‘이 학습목표를 달성하려면 어떤 경험을 어디에 배치해야 할까?’에 가까워지고 있습니다. 지식 전달, 토론, 실습, 피드백, 현업 적용처럼 학습의 목적을 먼저 나누고 각각에 가장 적합한 방법을 연결하는 것. Blended Learning의 핵심은 ‘두 방식을 섞는 것’이 아니라 ‘학습경험을 설계하는 것’에 있습니다."
     ],
     "bite_term": "Blended Learning",
-    "bite_definition": "온라인과 오프라인을 단순 병행하는 것이 아니라, 각 방식의 강점을 학습목표에 맞게 하나의 학습경험으로 설계하는 방식입니다.",
-    "bite_line": "지식 습득은 온라인으로, 토론과 실습은 오프라인으로 설계할 수도 있습니다.",
+    "bite_definition": "온라인과 오프라인 교육을 단순히 함께 운영하는 것이 아니라, 각 학습방식이 가진 장점을 학습목표에 맞게 조합해 하나의 학습경험으로 설계하는 방식입니다. 예를 들어 Before 단계에서는 온라인 콘텐츠로 핵심 개념과 사전지식을 익히고, During 단계에서는 오프라인에서 토론·실습·피드백·협업을 진행하며, After 단계에서는 디지털 학습과 현업 과제로 복습과 적용을 이어갈 수 있습니다.",
+    "bite_line": "온라인과 오프라인 중 무엇이 더 좋은지가 아니라, 무엇을 어디에서 배우게 할지가 중요합니다.",
     "source_name": "휴넷",
-    "source_title": "2026년 기업교육 전망 관련 HRD Trend 자료",
-    "source_url": "https://hrd.hunet.co.kr/Trend/",
-    "tags": [
-      "국내 HRD",
-      "Blended Learning",
-      "기업교육"
-    ]
+    "source_title": "2026년의 기업교육은 어떤 모습일까요?",
+    "source_url": "https://hrd.hunet.co.kr/Trend/TrendDetail?board_seq=342",
+    "tags": ["국내 HRD", "Blended Learning", "기업교육", "Learning Design"]
   },
   {
     "date": "2026-09-02",
@@ -63,11 +57,7 @@
     "source_name": "ATD",
     "source_title": "The New L&D Bottleneck: Why AI Quality Assurance Is Your Most Critical Capability",
     "source_url": "https://www.td.org/content/atd-blog/the-new-l-and-d-bottleneck-why-ai-quality-assurance-is-your-most-critical-capability",
-    "tags": [
-      "AI × HRD",
-      "AI Quality",
-      "Learning Design"
-    ]
+    "tags": ["AI × HRD", "AI Quality", "Learning Design"]
   },
   {
     "date": "2026-09-03",
@@ -85,11 +75,7 @@
     "source_name": "LinkedIn Talent Blog",
     "source_title": "How Teradata Built Growth Culture to Power AI Innovation",
     "source_url": "https://www.linkedin.com/business/talent/blog/learning-and-development/teradata-growth-culture-powering-ai-innovation",
-    "tags": [
-      "타사 사례",
-      "Growth Culture",
-      "Learning in Work"
-    ]
+    "tags": ["타사 사례", "Growth Culture", "Learning in Work"]
   },
   {
     "date": "2026-09-04",
@@ -107,10 +93,6 @@
     "source_name": "ATD",
     "source_title": "Employer-Sponsored Professional Development",
     "source_url": "https://www.td.org/product/research-report--employer-sponsored-professional-development/792608",
-    "tags": [
-      "Learning Curation",
-      "Professional Development",
-      "HRD"
-    ]
+    "tags": ["Learning Curation", "Professional Development", "HRD"]
   }
 ]
