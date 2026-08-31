@@ -131,5 +131,29 @@
     "source_title": "HR 트렌드 리포트 (2026년 2분기)",
     "source_url": "https://studio.kma.or.kr/member/feed/detail/1280",
     "tags": ["HRD Trend", "Skill Intelligence", "Skills-First", "Upskilling"]
+  },
+  {
+    "date": "2026-09-08",
+    "weekday": "화",
+    "category": "Learning Transfer",
+    "title": "교육은 끝났는데, 왜 현업에서는 달라지지 않을까? — Learning Transfer를 만드는 조건",
+    "summary": [
+      "좋은 강사, 탄탄한 교안, 높은 만족도. 교육이 성공적으로 끝났다고 느끼게 만드는 요소들입니다. 하지만 HRD에서 더 어려운 질문은 교육이 끝난 뒤 시작됩니다. ‘구성원이 교육에서 배운 내용을 실제 업무에서 사용하고 있는가?’입니다. 교육장에서 새로운 지식이나 Skill을 이해했다고 해도 현업에 돌아간 뒤 기존 방식으로 일한다면, 학습은 실제 성과 변화로 이어지기 어렵습니다. 교육에서 습득한 지식과 Skill을 실제 업무에 적용하고 유지하는 과정을 HRD에서는 Learning Transfer 또는 Training Transfer라고 부릅니다. 최근 연구 역시 교육 효과를 이해하려면 교육 직후의 반응만이 아니라 이후 실제 행동으로 이어지는 과정을 함께 봐야 한다고 강조합니다.",
+      "문제는 교육만 잘 설계한다고 Transfer가 자동으로 일어나지는 않는다는 것입니다. 2026년 「Frontiers in Organizational Psychology」에 발표된 연구는 독일어권 근로자 537명과 미국 근로자 507명을 대상으로 Training Transfer와 교육 이후 Knowledge Sharing에 영향을 미치는 조건을 분석했습니다. 연구에서는 개인의 성장지향성이나 학습목표의 명확성뿐 아니라 교육내용의 현업 적용 가능성, 교육자료, 동료의 지원, 피드백, 상사의 지원, 실제 적용할 수 있는 업무 여건 등이 교육 이후 행동과 연결되는 요인으로 나타났습니다. 즉 Transfer는 학습자의 의지만으로 설명하기 어렵고, 교육 이후 어떤 업무환경으로 돌아가는가가 함께 중요합니다.",
+      "이 지점에서 특히 중요한 사람이 Line Manager입니다. CIPD는 관리자를 Learning Ecosystem의 핵심 요소로 설명하며, 구성원의 Skill 개발에는 Practice, Permission, Opportunity, 즉 연습할 수 있는 환경, 새롭게 배운 방식을 시도해도 된다는 허용, 실제로 적용해볼 기회가 필요하다고 강조합니다. 구성원이 새로운 방법을 배웠더라도 관리자가 ‘지금은 바쁘니까 원래 방식대로 해’라고 한다면 Transfer가 일어나기 어렵습니다. 반대로 교육 이후 작은 업무부터 새로운 방식을 시도하게 하고, 시간을 확보해주고, 결과에 대해 피드백을 제공한다면 교육에서 배운 Skill은 실제 행동으로 연결될 가능성이 커집니다.",
+      "관리자의 영향력은 교육 이후에만 시작되는 것도 아닙니다. CIPD가 인용한 2,000명 이상의 Workplace Learner 조사에서는 구성원이 회사의 학습기회를 알게 되는 경로로 Manager를 꼽은 비율이 38%였던 반면, L&D를 꼽은 비율은 18%였습니다. 같은 조사에서 약 4명 중 3명은 업무나 역할의 어려움을 해결할 때 관리자의 지원이 도움이 됐다고 응답했습니다. 즉 관리자는 단순히 ‘교육 참가를 승인하는 사람’이 아니라, 어떤 학습이 필요한지 발견하고, 참여를 독려하며, 이후 현업 적용까지 연결하는 사람에 가깝습니다.",
+      "그런데 실제 조직에서는 이 연결이 충분히 일어나고 있지 않습니다. CIPD의 「Learning at Work 2023」 데이터를 분석한 자료에 따르면 Line Manager가 L&D의 Impact 평가에 관여한다고 응답한 비율은 29%, 구성원이 L&D 활동에서 배운 것을 현업으로 Transfer하도록 지원한다고 응답한 비율은 36%였습니다. 역으로 보면 많은 조직에서 교육은 HRD가 운영하고, 교육이 끝난 뒤 현업 적용은 사실상 학습자 개인에게 맡겨지는 구조일 수 있습니다.",
+      "기존 학술연구에서도 같은 방향이 반복적으로 확인됩니다. Work Environment와 Training Transfer를 분석한 메타분석에서는 동료 지원, 상사 지원, 조직 지원 모두 Training Transfer와 유의한 정적 관계를 보였고, 세 가지 환경요인을 함께 고려한 모델은 Transfer 차이의 약 32%를 설명했습니다. 특히 장기간 학습내용을 유지하는 Sustainment와 관련해서는 Peer Support와 Supervisor Support가 강한 관계를 보였습니다. 또 32개 연구, 5,487명을 종합한 별도의 메타분석에서는 Feedback·Coaching이 Training Transfer를 예측하는 중요한 요인으로 나타났습니다. 교육 이후의 피드백과 주변의 지원이 단순한 부가요소가 아니라는 의미입니다.",
+      "그렇다면 HRD는 무엇을 할 수 있을까요? 핵심은 관리자에게 ‘교육생을 잘 챙겨주세요’라는 막연한 요청을 보내는 것이 아니라, 관리자가 Transfer를 지원하기 쉽게 만드는 장치를 교육과 함께 설계하는 것입니다. 예를 들어 교육 전에는 이번 교육 이후 구성원이 시도해보길 원하는 행동 한 가지를 함께 정하고, 교육 직후에는 다음 2주 안에 해당 Skill을 사용할 업무기회를 한 번 만들며, 2주 후에는 무엇을 시도했고 어떤 결과가 있었는지 짧게 대화하고, 한 달 후에는 잘된 점과 어려웠던 점을 바탕으로 다음 행동을 정하는 식입니다. CIPD 역시 L&D가 관리자에게 추가적인 ‘L&D 업무’를 떠넘기기보다, 관리자들이 원래 수행하는 팀 운영의 Rhythm 안에서 Reflection, Practice, Adaptation, Habit Formation을 지원할 수 있는 간단한 Tool을 제공하는 것이 중요하다고 제안합니다.",
+      "관리자 자체의 역량도 중요합니다. Gallup은 Coaching과 People Development에 초점을 둔 Manager Training을 받은 관리자들이 비교집단보다 Manager Performance 지표가 20~28% 개선됐고, 이들이 이끄는 팀의 Engagement가 최대 18% 높게 나타났다고 보고했습니다. 이 결과가 Training Transfer 자체를 직접 측정한 연구는 아니지만, 관리자가 Coaching과 Development를 수행할 수 있도록 지원하는 것이 팀의 행동과 성과 환경에 영향을 미친다는 점을 보여줍니다.",
+      "결국 좋은 교육의 마지막 장면은 교육장에서 박수를 치며 끝나는 순간이 아닐 수 있습니다. 구성원이 현업으로 돌아가 새롭게 배운 방식을 한 번 시도하고, 관리자가 그 시도를 허용하고, 피드백을 주고, 다시 적용해볼 기회를 만드는 순간까지 이어져야 교육은 실제 행동으로 연결됩니다. HRD의 질문도 ‘교육을 잘 운영했는가?’에서 한 단계 더 나아가, ‘이 사람이 돌아간 현업에는 배운 것을 써볼 수 있는 조건이 마련되어 있는가?’까지 확장될 필요가 있습니다."
+    ],
+    "bite_term": "Learning Transfer",
+    "bite_definition": "교육에서 배운 지식·Skill·행동을 실제 업무에서 사용하고, 일정 시간이 지나도 지속적으로 적용하는 것을 의미합니다. 실무적으로는 Learn에서 새로운 지식과 방법을 습득하고, Try에서 현업에 실제로 적용한 뒤, Feedback을 통해 관리자·동료의 피드백을 받고, Repeat 단계에서 다른 상황에 다시 사용하며, Sustain 단계에서 새로운 방식이 실제 업무습관으로 정착되는 흐름으로 이해할 수 있습니다. 여기서 Learn과 Try 사이가 끊기면 교육을 아무리 잘 받아도 Transfer는 일어나기 어렵습니다.",
+    "bite_line": "좋은 교육을 만드는 것만큼, 배운 것을 써볼 수 있는 환경을 만드는 것도 HRD입니다.",
+    "source_name": "CIPD",
+    "source_title": "How L&D can create value: Role of the line manager in supporting skills development",
+    "source_url": "https://www.cipd.org/en/views-and-insights/thought-leadership/insight/learning-value-role-manager/",
+    "tags": ["Learning Transfer", "Manager Support", "Training Transfer", "HRD"]
   }
 ]
