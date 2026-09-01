@@ -31,24 +31,28 @@ const CURATED_BOLD = {
     '좋은 학습 콘텐츠가 만들어지도록 기준을 설계하고 품질을 지키는 사람'
   ],
   '2026-09-03': [
-    '구성원이 지속적으로 배우고 자신의 성장을 주도할 수 있는 Growth Culture',
-    'Agility, Shared Outcomes, Skills Focus',
-    '역할별 학습을 다르게 설계',
-    '학습을 특정 교육일이나 LMS 안에서만 일어나게 하지 않고, 구성원의 실제 업무와 경력개발 과정 속에 학습 장치를 배치',
-    'Manager와 Employee가 일상적으로 반복하는 업무 리듬 속에 포함',
-    'Formal Learning과 일상적 개발 경험을 함께 연결',
-    '교육 플랫폼, 경력개발, 관리자 대화, 멘토링, 역할별 Skill Development를 연결하는 Talent System',
-    '학습을 업무 밖에 하나 더 얹는 것이 아니라, 업무와 성장의 과정 안에 학습이 자연스럽게 흘러가게 만드는 것'
+    '모두가 알아야 하는 공통 기반은 넓게 제공하되, 실제 업무에 필요한 심화역량은 수준과 직무에 따라 다르게 설계하는 방식',
+    'GenAI PowerUser Program',
+    '총 4단계',
+    '직무와 요구되는 전문성에 따라 학습경로가 갈라집니다.',
+    '80% 이상이 2단계 과정을 수료',
+    '실제 현업 과제를 수행해 전문성을 검증',
+    '교육의 끝을 수료에만 두지 않았다는 것',
+    '2,500명의 임직원을 대상으로 서비스 실효성을 검증',
+    '전 직원 교육이냐, 맞춤형 교육이냐’ 중 하나를 선택하는 문제가 아니라는 점',
+    '우리 구성원 모두가 알아야 하는 수준은 어디까지이고, 직무별로 달라져야 하는 역량은 무엇이며, 누가 더 깊은 전문가로 성장해야 하는가?'
   ],
   '2026-09-04': [
-    'Professional Development의 범위는 이보다 훨씬 넓어지고 있습니다',
-    '외부의 다양한 학습자원까지 포함하는 구조로 확장',
-    '직장인의 86%가 Employer-Sponsored Professional Development에 참여한 경험',
-    '이미 존재하는 양질의 학습자원을 발견하고 필요한 사람에게 연결하는 것 자체가 중요한 HRD 활동',
-    'Content Curation 역량',
-    '정확성, 최신성, 저작권, 접근권한',
-    '이 학습자에게 지금 무엇이 필요한가?',
-    '필요한 것을 발견하고, 믿을 만한지 검증하고, 학습자의 맥락에 맞게 연결하는 능력'
+    '배울 시간이 없다',
+    '직업훈련이 필요한 인원은 약 15만 명, 현원 대비 30.2%',
+    '과중한 업무로 인한 교육시간 확보 부족’이 41.6%로 가장 큰 제약요인',
+    '업무량은 그대로인데 학습만 업무 사이에 추가된다면 학습은 결국 ‘남는 시간에 해야 하는 일’이 될 수 있습니다.',
+    '48%가 업무 또는 가족으로 인한 시간 부족을 가장 중요한 이유',
+    '시간 제약을 주요 장벽으로 꼽은 비율이 60% 이상인 국가',
+    '교육 참여율을 학습자의 의지만으로 설명해서는 안 된다는 것',
+    '조직이 ‘이 시간은 학습에 사용해도 된다’고 명확하게 인정해주는 구조',
+    '교육받을 기회, 업무에서 빠져나올 수 있는 시간, 그리고 학습해도 괜찮다는 조직의 허용',
+    '배울 수 있는 조건을 만드는 것'
   ],
   '2026-09-07': [
     '우리 조직에 현재 어떤 Skill이 있고, 앞으로 어떤 Skill이 더 필요해질 것인가?',
@@ -129,6 +133,20 @@ function applyEditorialOverrides(items){
     };
   });
 }
+function itemSources(item){
+  if(Array.isArray(item.sources) && item.sources.length) return item.sources;
+  return [{name:item.source_name,title:item.source_title,url:item.source_url}];
+}
+function renderSources(item){
+  return itemSources(item).map(source=>`
+      <div class="source-box">
+        <div class="source-meta">
+          <small>출처 · ${escapeHTML(source.name)}</small>
+          <strong>${escapeHTML(source.title)}</strong>
+        </div>
+        <a class="source-link" target="_blank" rel="noopener noreferrer" href="${source.url}">원문 보기 ↗</a>
+      </div>`).join('');
+}
 function renderBriefing(item){
   if(!item) return;
   state.current = item;
@@ -150,13 +168,7 @@ function renderBriefing(item){
       <div class="summary">
         ${item.summary.map(p=>`<p>${renderRichText(p, item.date)}</p>`).join('')}
       </div>
-      <div class="source-box">
-        <div class="source-meta">
-          <small>출처 · ${escapeHTML(item.source_name)}</small>
-          <strong>${escapeHTML(item.source_title)}</strong>
-        </div>
-        <a class="source-link" target="_blank" rel="noopener noreferrer" href="${item.source_url}">원문 보기 ↗</a>
-      </div>
+      ${renderSources(item)}
       <div class="bite">
         <div>
           <div class="section-kicker"><span class="section-number">2</span> 오늘의 HRD 한입 🍪</div>
