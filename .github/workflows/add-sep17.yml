@@ -1,0 +1,90 @@
+name: Add Sep 17 Briefing
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update briefing data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path('data/briefings.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+
+          item = {
+            "date": "2026-09-17",
+            "weekday": "목",
+            "category": "타사 HRD Case",
+            "title": "해외에 다녀온 뒤, 회사에는 무엇이 남을까? — CJ프레시웨이의 Global Way Makers",
+            "summary": [
+              "기업의 해외연수를 떠올리면 해외 선진기업을 방문하고, 현지 시장을 둘러보고, 새로운 문화를 경험한 뒤 귀국하는 모습이 먼저 생각날 수 있습니다. 이런 경험 자체도 구성원에게는 의미가 있습니다. 하지만 HRD 관점에서는 그다음 질문이 하나 더 남습니다. **‘그 경험이 참가자 개인에게만 남지 않고, 조직에는 무엇으로 남을 수 있을까?’**",
+              "식자재 유통과 푸드서비스 사업을 운영하는 CJ프레시웨이에는 이 질문과 연결해서 살펴볼 만한 사내 해외연수 프로그램이 있습니다. **Global Way Makers, GWM**입니다. CJ프레시웨이는 글로벌 비즈니스 환경 변화에 대응하고 **해외 시장의 신사업 기회를 발굴하는 동시에 구성원의 글로벌 역량을 강화하기 위해** GWM을 운영하고 있습니다. 식문화와 유통산업이 발달하면서 자사 사업과 연관성이 높은 미국·유럽·아시아 등의 국가가 주요 대상입니다.",
+              "GWM의 첫 번째 특징은 **해외에 가는 것 자체보다 ‘무엇을 관찰하고 해결할 것인가’가 프로그램에 들어 있다는 점**입니다. CJ프레시웨이의 기업문화 페이지에 따르면 참가자는 서류심사와 인터뷰를 통해 선발된 뒤 그룹을 구성하고, **약 3~4주 동안 현지에서 식문화 체험·지역 연구·시장조사 등을 수행**합니다. 그리고 여기서 얻은 내용을 바탕으로 **사업 과제와 아이디어를 직접 기획**합니다. 즉 ‘해외에 간다 → 보고 온다’에서 끝나는 것이 아니라, **‘현장을 경험한다 → 시장을 조사한다 → 우리 사업과 연결해본다’**까지가 하나의 학습경험에 포함되어 있습니다.",
+              "실제 2024년에는 **미국과 일본**이 연수 국가로 선정됐습니다. 참가자들은 현지 산업과 문화를 직접 경험하고, 선진기업 Benchmarking, 유관기관·거래처 방문, 시장조사 등을 수행했습니다. CJ프레시웨이가 공개한 공식 콘텐츠에도 미국의 K-Food 시장을 탐색하거나 일본 식품업계와 간편식 시장을 살펴보는 GWM 활동이 남아 있습니다.",
+              "이 구조는 유통·식품기업의 인재육성이라는 점에서도 흥미롭습니다. 예를 들어 일본의 편의점 도시락을 직접 구매하고 먹어보는 경험은 여행 중 하나의 식문화 체험으로 끝날 수도 있습니다. 하지만 식자재 유통기업의 구성원이 ‘어떤 상품이 팔리는가?’, ‘누가 구매하는가?’, ‘가격과 구성은 어떻게 다른가?’, ‘국내 시장과 어떤 차이가 있는가?’, ‘우리 사업에 적용할 수 있는 아이디어는 무엇인가?’라는 질문과 함께 본다면 같은 경험도 하나의 **Business Learning**이 될 수 있습니다.",
+              "GWM의 두 번째 특징은 **경험을 참가자 개인에게만 남겨두지 않는다는 점**입니다. CJ프레시웨이의 ESG 보고서에 따르면 참가자들은 해외연수 중 사업 과제를 수행하는 것과 함께 **영상 콘텐츠를 제작해 현지 생활·문화·시장·최신 트렌드를 조직 안팎에 공유**합니다. 회사는 이를 통해 현장에서 획득한 정보를 조직의 글로벌 지식 기반으로 확산시키고자 한다고 설명합니다.",
+              "누군가 해외에서 새로운 것을 발견해도 그 사람의 머릿속에만 남으면 조직이 활용할 수 있는 지식은 제한적입니다. 반대로 Experience에서 현장에서 직접 보고 경험하고 → Interpret에서 우리 사업에 어떤 의미가 있는지 생각하고 → Create에서 사업 과제와 아이디어로 정리하고 → Share에서 콘텐츠를 통해 다른 구성원에게 전달하면 한 사람의 경험이 다른 사람도 활용할 수 있는 **조직의 학습자원**으로 바뀔 수 있습니다. **Experience → Interpret → Create → Share**는 CJ프레시웨이가 공식적으로 사용하는 GWM 모델이 아니라, 공개된 운영방식을 HRD 관점에서 이해하기 쉽게 정리한 흐름입니다.",
+              "세 번째로 눈에 띄는 부분은 **프로그램이 귀국과 함께 완전히 종료되지 않는다는 것**입니다. CJ프레시웨이는 GWM 참가자를 **Global Talent Pool로 지속 관리**한다고 밝히고 있습니다. 즉 해외연수를 단발적인 보상성 프로그램으로만 운영하기보다, 글로벌 경험과 관심을 가진 인재를 식별하고 이후에도 성장할 수 있도록 연결하려는 구조입니다.",
+              "선발 방식도 이 방향과 맞닿아 있습니다. 2023년 ESG 보고서에 따르면 GWM은 **연 1회 사내 공모**를 통해 참가자를 선발하며, 글로벌 사업에 대한 관심과 비전을 가진 구성원이라면 **근속기간과 관계없이 지원할 수 있도록** 운영됐습니다. 즉 특정 직급이 되었기 때문에 일괄적으로 보내는 해외연수보다는, 글로벌 사업에 대한 관심과 성장 의지가 있는 구성원에게 경험의 기회를 제공하는 방식에 가깝습니다.",
+              "GWM은 프로그램이 진행되면서 탐색 국가도 바뀌었습니다. 초기 GWM 1기는 **미국과 이탈리아**, 이후 2024년 GWM 2기는 **미국과 일본**을 중심으로 운영됐습니다. 회사가 운영하는 공식 콘텐츠에는 미국 시장조사, 이탈리아 식문화 탐방, 미국 K-Food 시장, 일본 식품업계와 간편식 시장 등 각 팀의 활동내용이 남아 있습니다. 이를 보면 GWM의 학습 소재가 교재 안에 미리 정해져 있다기보다 **회사가 실제로 관심을 가지고 있는 시장과 산업 현장 자체가 학습의 재료**가 되는 모습을 확인할 수 있습니다.",
+              "이런 방식은 HRD에서 말하는 **Experiential Learning, 경험학습**과 연결해서 볼 수 있습니다. 경험학습에서 중요한 것은 단순히 특별한 경험을 많이 하는 것이 아닙니다. 직접 경험하고, 그 경험에서 무엇을 발견했는지 돌아본 뒤, 의미를 만들어 실제 다음 행동에 활용하는 과정이 중요합니다. 따라서 해외연수 역시 ‘어디를 다녀왔는가?’보다 **‘무엇을 발견했는가?’, ‘그 발견을 우리 Business와 어떻게 연결했는가?’, ‘다른 구성원에게 무엇을 남겼는가?’, ‘그 경험이 이후의 성장기회와 어떻게 이어지는가?’**가 HRD 설계에서는 더 중요한 질문이 될 수 있습니다.",
+              "물론 GWM의 효과를 과장해서 해석할 필요는 없습니다. 이번 자료들은 모두 CJ프레시웨이가 직접 공개한 ESG 보고서와 기업문화·콘텐츠 자료를 기반으로 하고 있습니다. 따라서 **GWM 참여로 실제 사업성과가 얼마나 증가했는지, 참가자의 역량이 어느 정도 향상됐는지를 독립적으로 검증한 연구는 아닙니다.** 회사가 공개한 프로그램의 운영방식과 목적을 HRD 관점에서 살펴본 사례로 이해하는 것이 적절합니다.",
+              "그럼에도 GWM이 보여주는 한 가지 특징은 분명합니다. **좋은 경험을 제공하는 것에서 끝나지 않고, 그 경험에 ‘과제·공유·후속 성장’을 붙였다는 것**입니다. 해외연수뿐 아니라 박람회 참관, Benchmarking, 외부 Conference, 우수사원 연수 같은 프로그램에서도 같은 질문을 적용할 수 있습니다. 참가자가 무엇을 보고 왔는지 보고서를 제출하는 데서 끝낼 것인지, 아니면 그 경험을 실제 조직의 문제와 연결하고 다른 구성원이 사용할 수 있는 지식으로 바꿀 것인지에 따라 **같은 경험도 전혀 다른 Learning Experience가 될 수 있습니다.**",
+              "결국 HRD가 경험을 설계할 때 중요한 질문은 ‘어디에 보내줄까?’만이 아닐 수 있습니다. **‘이 경험이 끝난 뒤, 개인에게는 어떤 역량이 남고 조직에는 어떤 지식과 아이디어가 남게 할 것인가?’** 경험을 ‘좋은 추억’에서 ‘조직의 학습’으로 바꾸는 것은 어쩌면 그 질문에서 시작될 수 있습니다."
+            ],
+            "bite_term": "Experiential Learning",
+            "bite_definition": "Experiential Learning, 즉 경험학습은 학습자가 설명을 듣는 것에 머무르지 않고 직접 경험하고, 그 경험을 돌아보고, 의미를 발견한 뒤 새로운 상황에 다시 적용하면서 배우는 방식입니다. 업무에서의 경험도 자동으로 학습이 되는 것은 아닙니다. 실무적으로는 Experience에서 직접 보고 행동해보고 → Reflect에서 무엇을 발견했는지 돌아보고 → Learn에서 그 경험에서 원리와 Insight를 찾아내고 → Apply에서 다음 업무와 문제에 활용하는 흐름으로 이해할 수 있습니다. 특히 기업 HRD에서는 새로운 Project, Job Rotation, 고객 미팅, 현장 Benchmarking, 해외연수, TF 참여 등 실제 업무와 가까운 경험 자체가 학습의 장이 될 수 있습니다. CJ프레시웨이가 공식적으로 GWM을 Experiential Learning Program이라고 명명한 것은 아니며, 이번 Daily HRD에서 프로그램을 이해하기 위한 HRD 개념으로 연결한 것입니다.",
+            "bite_line": "경험이 많다고 모두 학습이 되는 것은 아닙니다. 경험을 돌아보고, 의미를 만들고, 다시 활용할 때 학습이 됩니다.",
+            "source_name": "CJ프레시웨이",
+            "source_title": "2024 ESG Report — Global Way Makers",
+            "source_url": "https://m.cjfreshway.com/_resource/pdf/20251022/2024_ESG_Report_CJFW_KR_.pdf",
+            "sources": [
+              {
+                "name": "CJ프레시웨이",
+                "title": "2024 ESG Report — Global Way Makers",
+                "url": "https://m.cjfreshway.com/_resource/pdf/20251022/2024_ESG_Report_CJFW_KR_.pdf"
+              },
+              {
+                "name": "CJ프레시웨이",
+                "title": "기업문화 — Global Way Makers",
+                "url": "https://qam.cjfreshway.com/career/life/culture.jsp"
+              },
+              {
+                "name": "CJ프레시웨이",
+                "title": "2023 ESG Report",
+                "url": "https://contents.cj.net/esg/report/KR/2023_ESG_Report_CJFW_KR.pdf"
+              }
+            ],
+            "tags": ["타사 HRD Case", "CJ프레시웨이", "Experiential Learning", "Global Way Makers"]
+          }
+
+          data = [x for x in data if x.get('date') != item['date']]
+          data.append(item)
+          data.sort(key=lambda x: x['date'])
+          path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "daily-hrd-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/briefings.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Add Sep 17 CJ Freshway briefing"
+          git push
