@@ -106,7 +106,7 @@ function latestForToday(items){
   return eligible[0] || null;
 }
 function escapeHTML(str){
-  return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+  return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#039;'}[m]));
 }
 function renderRichText(str, date){
   let html = escapeHTML(str);
@@ -169,7 +169,7 @@ function renderBriefing(item){
       </div>
       <div class="tags">${item.tags.map(t=>`<span class="tag">#${escapeHTML(t)}</span>`).join('')}</div>
     </div>`;
-  restoreRating();
+  restoreFeedback();
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function renderArchive(items){
@@ -203,10 +203,26 @@ function filterItems(query){
   );
 }
 function ratingKey(){ return `daily-hrd-rating-${state.current?.date}`; }
-function restoreRating(){
+function commentKey(){ return `daily-hrd-comment-${state.current?.date}`; }
+function restoreFeedback(){
   const value = localStorage.getItem(ratingKey());
+  const comment = localStorage.getItem(commentKey()) || '';
   document.querySelectorAll('#rating button').forEach(b=>b.classList.toggle('active', b.dataset.value===value));
+  const commentBox = document.getElementById('feedbackComment');
+  if(commentBox) commentBox.value = comment;
   document.getElementById('ratingResult').textContent = value ? `${value}점으로 남겨주셨어요. 감사합니다!` : '';
+}
+function saveComment(){
+  const commentBox = document.getElementById('feedbackComment');
+  if(!commentBox) return;
+  const comment = commentBox.value.trim();
+  if(comment){
+    localStorage.setItem(commentKey(), comment);
+    showToast('코멘트를 저장했어요.');
+  } else {
+    localStorage.removeItem(commentKey());
+    showToast('코멘트를 비웠어요.');
+  }
 }
 function showToast(text){
   const el=document.getElementById('toast'); el.textContent=text; el.classList.add('show');
@@ -250,9 +266,10 @@ document.getElementById('searchInput').addEventListener('input',e=>renderArchive
 document.querySelectorAll('#rating button').forEach(btn=>{
   btn.addEventListener('click',()=>{
     localStorage.setItem(ratingKey(),btn.dataset.value);
-    restoreRating();
+    restoreFeedback();
   });
 });
+document.getElementById('feedbackSaveBtn').addEventListener('click',saveComment);
 window.addEventListener('hashchange',()=>{
   const hash=location.hash.replace('#','');
   const found=state.briefings.find(x=>x.date===hash);
