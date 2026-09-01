@@ -55,15 +55,17 @@ const CURATED_BOLD = {
     '배울 수 있는 조건을 만드는 것'
   ],
   '2026-09-07': [
-    '우리 조직에 현재 어떤 Skill이 있고, 앞으로 어떤 Skill이 더 필요해질 것인가?',
-    '핵심 Skill 가운데 평균 39%가 변화하거나 현재와 다른 수준의 역량을 요구',
-    '63%의 기업이 Skill Gap을 2025~2030년 비즈니스 전환을 가로막는 주요 장벽',
+    'AI가 들어온 뒤 우리 구성원에게 어떤 역량이 새롭게 필요해졌고, 그 변화는 어떻게 확인할 것인가?',
+    '구성원의 역량을 어떻게 변화시키고, 그 변화를 어떻게 측정할 것인가',
+    '앞으로 필요한 Skill이 무엇인지, 현재 구성원이 어떤 Skill을 어느 수준으로 가지고 있는지, 그리고 그 둘 사이에 어떤 Gap이 있는지를 지속적으로 파악하는 것',
+    '2030년까지 근로자의 핵심 Skill 가운데 평균 39%가 변화할 것',
+    '63%는 Skill Gap을 사업 전환의 가장 큰 장벽',
     '85%는 이에 대응하기 위해 기존 구성원의 Upskilling을 우선 추진',
-    '앞으로 필요한 Skill이 무엇인지, 현재 구성원이 어떤 Skill을 어느 수준으로 가지고 있는지, 그리고 그 둘 사이에 어떤 Gap이 존재하는지',
-    '현재 영업 구성원의 Skill을 파악하고 → 앞으로 필요한 Skill을 정의하고 → Gap이 큰 영역을 찾아',
-    '효과적으로 분류·관리하고 있다고 답한 HR Executive는 10%에 불과',
-    'Skill Data가 검증 가능하고 신뢰할 수 있어야',
-    'Business 변화 파악 → 필요한 Skill 정의 → 현재 Skill 파악 → Skill Gap 확인 → 적절한 Learning Experience 연결 → 변화 확인'
+    '환경이 바뀔 때마다 교육과정을 하나씩 추가하는 것만으로는 조직의 역량 변화를 따라가기 어렵기 때문입니다.',
+    'Skill을 조직 안에서 같은 의미로 사용할 수 있는 공통 언어',
+    '그 데이터가 검증 가능하고 신뢰할 수 있어야 한다',
+    '조직의 역량이 실제로 어떻게 변하고 있는지를 읽고 그 변화에 맞춰 육성 방향을 계속 조정해야 합니다.',
+    '우리 조직이 앞으로 해야 할 일을 위해 어떤 Skill이 필요하고, 그 Skill은 지금 어디에 있으며, 무엇을 더 키워야 하는가?'
   ],
   '2026-09-08': [
     '구성원이 교육에서 배운 내용을 실제 업무에서 사용하고 있는가?',
@@ -89,6 +91,52 @@ const CURATED_BOLD = {
     '어떤 문제에는 교육이 필요하고, 어떤 문제에는 다른 해결책이 필요한지를 구분',
     '이 교육으로 어떤 문제를 해결하고 싶은가요?'
   ]
+};
+
+const SEP7_OVERRIDE = {
+  date: '2026-09-07',
+  weekday: '월',
+  category: 'HRD Trend',
+  title: '직무보다 ‘스킬’을 먼저 본다 — HRD에도 필요한 Skill Intelligence',
+  summary: [
+    'AI가 업무에 빠르게 들어오면서 기업의 관심도 조금씩 달라지고 있습니다. 처음에는 “어떤 AI를 도입할 것인가?”가 중요한 질문이었다면, 이제는 “AI가 들어온 뒤 우리 구성원에게 어떤 역량이 새롭게 필요해졌고, 그 변화는 어떻게 확인할 것인가?”가 중요한 과제가 되고 있습니다.',
+    'KMA는 HR 트렌드 리포트에서 이러한 흐름을 Skill Intelligence라는 키워드로 제시합니다. KMA는 AI가 업무환경에 스며들면서 기업의 고민이 단순한 기술 도입을 넘어 구성원의 역량을 어떻게 변화시키고, 그 변화를 어떻게 측정할 것인가로 이동하고 있다고 설명합니다. 특히 교육 역시 단순히 과정을 제공하는 것보다 실제 업무 적용과 행동 변화, 나아가 조직의 성과로 이어지는지를 확인하는 것이 중요해지고 있다고 봅니다.',
+    '그렇다면 Skill Intelligence는 단순히 우리 회사에 어떤 Skill이 필요한지를 목록으로 만드는 것일까요? 핵심은 그보다 조금 더 넓습니다. 앞으로 필요한 Skill이 무엇인지, 현재 구성원이 어떤 Skill을 어느 수준으로 가지고 있는지, 그리고 그 둘 사이에 어떤 Gap이 있는지를 지속적으로 파악하는 것에 가깝습니다.',
+    '왜 이런 관점이 필요할까요? 기존 HRD는 주로 ‘직무’를 기준으로 교육을 설계해 왔습니다. 영업교육, MD교육, 점장교육처럼 직무나 역할을 먼저 정하고 그 안에 필요한 과정을 배치하는 방식입니다. 하지만 같은 직무라도 실제로 수행하는 업무와 필요한 Skill은 계속 달라질 수 있습니다. 몇 년 전 영업직무에서 상품지식과 고객응대가 핵심이었다면, 지금은 Data 활용, 생성형 AI 활용, Omni-channel 고객 이해와 같은 새로운 Skill이 함께 요구될 수 있습니다.',
+    '이러한 변화의 속도는 상당합니다. World Economic Forum의 「Future of Jobs Report 2025」에 따르면 기업들은 2030년까지 근로자의 핵심 Skill 가운데 평균 39%가 변화할 것으로 예상했습니다. 또한 기업의 63%는 Skill Gap을 사업 전환의 가장 큰 장벽으로 꼽았고, 85%는 이에 대응하기 위해 기존 구성원의 Upskilling을 우선 추진할 계획이라고 답했습니다. 전 세계 근로자를 100명으로 가정하면 59명은 2030년까지 추가적인 Training이 필요할 것으로 전망됐습니다.',
+    '여기서 KMA가 제시한 Skill Intelligence의 의미가 조금 더 선명해집니다. 환경이 바뀔 때마다 교육과정을 하나씩 추가하는 것만으로는 조직의 역량 변화를 따라가기 어렵기 때문입니다. 먼저 사업과 업무가 어떻게 변하고 있는지를 보고, 그 변화가 어떤 Skill을 요구하는지 확인하고, 현재 조직이 그 Skill을 얼마나 보유하고 있는지를 알아야 어떤 사람에게 어떤 학습이 필요한지도 판단할 수 있습니다.',
+    '예를 들어 새로운 AI Tool을 전사에 도입한다고 생각해볼 수 있습니다. 기존 방식이라면 전 직원 대상 AI 교육과정을 먼저 만들 수 있습니다. 하지만 Skill Intelligence 관점에서는 질문의 순서가 달라질 수 있습니다. 어떤 업무가 AI 때문에 달라지는가? → 그 업무를 수행하려면 어떤 새로운 Skill이 필요한가? → 현재 구성원은 그 Skill을 어느 정도 가지고 있는가? → Gap이 큰 사람과 작은 사람은 누구인가? → 각각 어떤 Learning Experience가 필요한가? 이렇게 보면 교육 대상과 내용도 달라집니다. 모든 구성원에게 동일한 과정을 제공하기보다 기본 AI Literacy가 필요한 사람, 업무 적용 Skill이 필요한 사람, 전문적인 AI 활용역량이 필요한 사람을 구분하고 서로 다른 학습경로를 연결할 수 있습니다. 9/3에 살펴본 삼성전자의 단계별 AI 육성체계 역시 이러한 관점에서 연결해볼 수 있습니다.',
+    '하지만 Skill Intelligence를 실제로 운영하는 것은 생각보다 쉽지 않습니다. 가장 먼저 필요한 것은 Skill을 조직 안에서 같은 의미로 사용할 수 있는 공통 언어입니다. Deloitte의 「The Skills-Based Organization」 관련 연구에서는 Skills Taxonomy나 Framework를 효과적으로 구축하고 있다고 답한 HR Executive가 10%에 불과한 반면, 85%는 관련 작업을 어느 정도 추진하고 있다고 답했습니다. Skill 중심 HR에 대한 관심은 높지만, 실제 데이터를 사용할 수 있는 수준으로 정리하는 것은 여전히 어려운 과제라는 의미입니다.',
+    '데이터의 정확성도 중요합니다. 구성원에게 “Data Analysis 역량이 어느 정도인가요?”라고 물어 자기평가 결과만 모으면 같은 4점이라도 사람마다 기준이 다를 수 있습니다. 실제 프로젝트 경험, 수행한 업무, 평가 결과, 학습이력, 자격이나 인증 등 여러 신호를 함께 봐야 보다 신뢰할 수 있는 Skill Data가 됩니다. Deloitte 역시 배치·승진·보상처럼 중요한 People Decision에 Skill 데이터를 활용하려면 그 데이터가 검증 가능하고 신뢰할 수 있어야 한다고 지적합니다.',
+    '이 때문에 최근에는 AI를 활용해 직무정보, 업무경험, 학습기록 등의 데이터를 분석하고 구성원의 Skill을 추론하거나, 필요한 Skill과 학습 콘텐츠를 연결하는 기술도 확대되고 있습니다. 하지만 여기서 중요한 것은 AI 자체가 아닙니다. AI가 Skill을 추정해준다고 해서 조직이 무엇을 육성해야 하는지가 자동으로 결정되는 것은 아니기 때문입니다. 어떤 Skill이 사업에 중요한지 판단하고, 어떤 수준까지 육성할지 결정하며, 그 결과를 실제 Learning과 Career Opportunity에 연결하는 것은 여전히 HR과 현업의 역할입니다.',
+    'KMA 리포트가 Skill Intelligence를 HR의 주요 키워드로 제시한 이유도 여기에 있다고 볼 수 있습니다. AI 시대의 HRD는 단순히 새로운 교육 콘텐츠를 빠르게 제공하는 데서 끝나는 것이 아니라, 조직의 역량이 실제로 어떻게 변하고 있는지를 읽고 그 변화에 맞춰 육성 방향을 계속 조정해야 합니다. 교육의 결과 역시 ‘몇 명이 수료했는가?’에서 끝나는 것이 아니라, 필요한 Skill이 실제로 개발됐는지, 업무에서 활용되고 있는지를 확인하는 방향으로 확장될 필요가 있습니다.',
+    'HRD 관점에서 이를 실무적으로 정리하면 Business 변화 파악 → 필요한 Skill 정의 → 현재 Skill 파악 → Skill Gap 확인 → 적절한 Learning Experience 연결 → Skill 변화 확인의 흐름으로 이해해볼 수 있습니다. 이 단계는 KMA가 공식적으로 제시한 6단계 모델이라기보다, KMA가 강조하는 ‘역량 변화의 파악과 측정’이라는 관점을 HRD 업무에 적용하기 쉽게 구조화한 것입니다.',
+    '결국 Skill Intelligence가 HRD에게 던지는 질문은 “어떤 교육과정을 새로 만들까?”보다 조금 앞에 있습니다. “우리 조직이 앞으로 해야 할 일을 위해 어떤 Skill이 필요하고, 그 Skill은 지금 어디에 있으며, 무엇을 더 키워야 하는가?” 이 질문에 답할 수 있을 때 HRD는 교육과정을 운영하는 역할을 넘어, 조직의 역량 변화를 읽고 필요한 성장을 연결하는 역할에 더 가까워질 수 있습니다.'
+  ],
+  bite_term: 'Skill Intelligence',
+  bite_definition: '조직이 현재 어떤 Skill을 가지고 있는지, 앞으로 어떤 Skill이 필요해질지, 그리고 그 사이에 어떤 Gap이 있는지를 데이터 기반으로 지속적으로 파악하고 활용하는 접근입니다. 단순한 Skill List와 달리 Need에서 앞으로 필요한 Skill을 정의하고, Know에서 현재 누가 어떤 Skill을 가지고 있는지 파악한 뒤, Gap을 확인하고, Develop 단계에서 교육·OJT·Coaching·Project 등 적절한 경험을 연결하고, Update에서 실제 Skill 변화와 새로운 요구를 계속 반영하는 흐름으로 이해할 수 있습니다. Need → Know → Gap → Develop → Update는 특정 기관의 공식 Skill Intelligence 모델이 아니라 이번 개념을 이해하기 위해 정리한 실무적 흐름입니다.',
+  bite_line: '교육과정을 먼저 보기 전에, 우리 조직에 어떤 Skill이 필요하고 무엇이 부족한지부터 봐야 합니다.',
+  source_name: 'KMA 한국능률협회',
+  source_title: 'HR 트렌드 리포트',
+  source_url: 'https://studio.kma.or.kr/member/feed/detail/916',
+  sources: [
+    {
+      name: 'KMA 한국능률협회',
+      title: 'HR 트렌드 리포트',
+      url: 'https://studio.kma.or.kr/member/feed/detail/916'
+    },
+    {
+      name: 'World Economic Forum',
+      title: 'Future of Jobs Report 2025',
+      url: 'https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf'
+    },
+    {
+      name: 'Deloitte',
+      title: 'The Skills-Based Organization',
+      url: 'https://www2.deloitte.com/us/en/insights/topics/talent/organizational-skill-based-hiring.html'
+    }
+  ],
+  tags: ['HRD Trend', 'Skill Intelligence', 'Skills-First', 'Upskilling']
 };
 
 function formatDate(dateStr, weekday){
@@ -124,13 +172,16 @@ function renderRichText(str, date){
 }
 function applyEditorialOverrides(items){
   return items.map(item => {
-    if(item.date !== '2026-08-31') return item;
-    return {
-      ...item,
-      source_name: 'ATD',
-      source_title: 'Highlights From ATD’s 2026 State of the Industry Report',
-      source_url: 'https://www.td.org/content/atd-blog/highlights-from-atd-s-2026-state-of-the-industry-report'
-    };
+    if(item.date === '2026-08-31'){
+      return {
+        ...item,
+        source_name: 'ATD',
+        source_title: 'Highlights From ATD’s 2026 State of the Industry Report',
+        source_url: 'https://www.td.org/content/atd-blog/highlights-from-atd-s-2026-state-of-the-industry-report'
+      };
+    }
+    if(item.date === '2026-09-07') return {...item, ...SEP7_OVERRIDE};
+    return item;
   });
 }
 function itemSources(item){
