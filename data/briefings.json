@@ -155,5 +155,30 @@
     "source_title": "How L&D can create value: Role of the line manager in supporting skills development",
     "source_url": "https://www.cipd.org/en/views-and-insights/thought-leadership/insight/learning-value-role-manager/",
     "tags": ["Learning Transfer", "Manager Support", "Training Transfer", "HRD"]
+  },
+  {
+    "date": "2026-09-09",
+    "weekday": "수",
+    "category": "HRD Practice",
+    "title": "‘교육 하나 만들어주세요’ — 정말 교육이 답일까?",
+    "summary": [
+      "‘팀장들에게 커뮤니케이션 교육이 필요해요.’ ‘이 내용으로 30분짜리 온라인 교육을 만들어주세요.’ ‘직원들이 제대로 안 하고 있으니 재교육이 필요할 것 같아요.’ HRD 담당자라면 한 번쯤 받아볼 법한 요청입니다. 이런 이야기를 들으면 자연스럽게 과정 구성, 강사, 콘텐츠, 일정부터 생각하기 쉽습니다. 하지만 2026년 ATD는 Needs Assessment를 다루면서 가장 먼저 던져야 할 질문이 ‘어떤 교육을 원하는가?’가 아니라고 강조합니다. 먼저 확인해야 할 것은 ‘어떤 Business Outcome을 개선하려고 하며, 현재 무엇이 제대로 이루어지지 않고 있는가?’입니다. 해결책보다 문제를 먼저 정의해야 한다는 뜻입니다.",
+      "왜 이런 과정이 필요할까요? 겉으로 드러나는 문제가 곧 원인은 아닐 수 있기 때문입니다. 예를 들어 고객 응대 품질이 떨어졌다고 해봅시다. 직원들이 올바른 응대방법을 모르고 있다면 교육이 적절한 해결책일 수 있습니다. 하지만 이미 방법을 알고 있는데 시스템이 느려 고객정보를 확인할 수 없거나, 현장 인력이 부족하거나, 관리자가 다른 행동을 요구하거나, 평가·보상기준이 서비스 품질과 충돌하고 있다면 교육만 추가해도 상황은 크게 달라지지 않을 가능성이 높습니다. ATD 역시 Performance Gap의 원인을 지식·Skill 부족뿐 아니라 System Barrier와 Environmental Friction까지 포함해 살펴봐야 한다고 설명합니다.",
+      "CIPD도 같은 방향을 제시합니다. 2025년 개정된 Learning Needs Analysis 자료에서는 L&D Needs를 단순히 ‘구성원이 어떤 교육을 받고 싶어 하는가’로 파악하지 않고, 조직이 현재와 미래에 필요로 하는 Capability와 실제 보유 수준 사이의 차이에서 출발해야 한다고 설명합니다. 그리고 Performance Gap이 발견되더라도 자동으로 Course를 만드는 것이 아니라 그 필요를 해결할 수 있는 여러 방법을 검토해야 한다고 명시합니다. 즉 Needs Analysis의 결과가 반드시 ‘교육과정’일 필요는 없습니다.",
+      "최근 L&D 현업에서도 이런 문제의식은 반복되고 있습니다. LinkedIn Talent Blog는 2025년 Training Request를 다루는 방법을 설명하면서, 현업의 요청을 단순한 Training Order가 아니라 ‘무언가 제대로 작동하지 않고 있다는 신호’로 보라고 제안합니다. 예를 들어 ‘Communication Boot Camp를 만들어주세요’라는 요청이 들어왔다면 곧바로 프로그램을 만드는 대신, 왜 필요하다고 생각하는지 → 현재 어떤 행동이 나타나고 있는지 → 어떤 결과가 나오지 않고 있는지를 질문하면서 실제 문제에 접근하는 식입니다.",
+      "이때 중요한 것은 현업의 요청을 바로 거절하는 것도 아닙니다. ‘그건 교육으로 해결할 문제가 아닙니다’라고 말하면 HRD와 현업 사이에 오히려 벽이 생길 수 있습니다. LinkedIn 사례에서는 Yes 또는 No부터 결정하는 대신 요청을 Partnership의 시작점으로 바라볼 것을 제안합니다. 현업은 이미 어떤 문제 때문에 도움을 요청한 상태이므로, HRD는 그 요청을 존중하면서 함께 원인을 찾아가는 역할을 하는 것입니다. 즉 ‘교육을 만들어드릴게요’도 아니고 ‘교육으로 안 됩니다’도 아닌, ‘어떤 문제를 해결하려는 건지 같이 먼저 확인해보겠습니다’가 출발점이 됩니다.",
+      "2026년 ATD는 이런 Needs Assessment가 너무 오래 걸린다는 현실적인 고민도 다룹니다. 빠르게 움직이는 조직에서 모든 요청마다 몇 주짜리 대규모 분석을 하는 것은 어렵기 때문입니다. 대신 Quick Scan → Focused Sensemaking → Micro-Test처럼 작은 단위로 진단할 수 있다고 제안합니다. 처음에는 Performance Data, 짧은 Stakeholder Interview, Pulse Survey 등으로 빠르게 문제의 윤곽을 파악하고, 필요한 부분만 추가 인터뷰나 분석으로 확인한 뒤, 전체 교육을 만들기 전에 작은 Pilot으로 가설을 검증하는 방식입니다.",
+      "특히 2026년 Needs Assessment에서는 운영 데이터를 함께 보는 것이 강조됩니다. ATD는 CRM, 고객서비스 Dashboard, HRIS, LXP 같은 데이터뿐 아니라 Help-desk Ticket, Workflow Interruption 같은 행동신호까지 활용할 수 있다고 설명합니다. 예를 들어 ‘신입사원이 업무를 잘 못한다’는 요청이 들어왔다면 만족도 조사만 보는 대신 업무 오류율, 문의가 집중되는 단계, 숙련까지 걸리는 시간, 시스템 사용 패턴 등을 함께 보면 문제가 정말 지식 부족인지 다른 환경요인인지 더 정확하게 판단할 수 있습니다.",
+      "HRD가 실제로 사용할 질문도 생각보다 복잡할 필요는 없습니다. 현재 어떤 결과가 나오고 있는지 Current State를 확인하고, 원래 어떤 결과가 나와야 하는지 Desired State를 확인한 뒤, 어떤 행동이 달라져야 하는지 Performance Gap을 살펴봅니다. 그다음 그 행동을 못 하는 이유가 정말 지식이나 Skill 부족인지 Root Cause를 확인하고, 교육 말고 바꿔야 할 시스템·프로세스·관리 방식은 없는지 Solution 범위를 검토할 수 있습니다. 이 흐름은 특정 기관의 공식 5단계 모델이라기보다 ATD와 CIPD의 Needs Assessment 원칙을 HRD 실무에서 빠르게 활용할 수 있도록 정리한 질문 흐름입니다.",
+      "예를 들어 현업에서 ‘매장 관리자들의 피드백 교육이 필요합니다’라는 요청이 왔다고 가정해볼 수 있습니다. 조사해보니 관리자들이 Feedback 방법을 전혀 모른다면 교육이 필요합니다. 하지만 관리자는 이미 방법을 알고 있는데 면담시간이 확보되지 않는다거나, 목표가 불명확해 어떤 Feedback을 해야 할지 모르거나, 시스템상 직원의 Performance Data를 확인하기 어렵다면 해결책은 달라집니다. 이 경우 필요한 것은 Feedback 교육 하나가 아니라 관리자 교육 + Conversation Guide + 면담시간 확보 + Performance 정보 제공의 조합일 수도 있습니다. 이것이 Performance Consulting 관점에서 중요한 차이입니다.",
+      "HRD의 전문성은 반드시 교육을 잘 만드는 능력으로만 증명되는 것은 아닙니다. 오히려 어떤 문제에는 교육이 필요하고, 어떤 문제에는 다른 해결책이 필요한지를 구분할 수 있을 때 HRD가 사용하는 시간과 예산 역시 더 의미 있는 곳에 집중될 수 있습니다. ATD도 Needs Assessment를 건너뛸 경우 잘못된 문제를 해결할 위험이 있다고 지적하며, 2026년의 L&D에는 속도와 함께 Data Fluency, Strategic Thinking, Stakeholder Empathy가 필요하다고 설명합니다. 결국 현업에서 ‘교육 하나 만들어주세요’라는 말이 들렸을 때 HRD의 첫 질문은 ‘언제까지 만들어드릴까요?’가 아니라 ‘이 교육으로 어떤 문제를 해결하고 싶은가요?’일 수 있습니다."
+    ],
+    "bite_term": "Performance Consulting",
+    "bite_definition": "현업이 요청한 교육을 곧바로 만드는 대신, 현재 성과와 기대하는 성과 사이의 Gap을 확인하고 그 원인을 진단한 뒤 가장 적절한 해결책을 함께 찾는 접근입니다. 실무적으로는 Request에서 현업의 요청을 확인하고, Performance Gap에서 실제로 무엇이 제대로 되고 있지 않은지 살펴본 뒤, Root Cause에서 그 이유를 진단합니다. 이후 Solution 단계에서 교육이 필요한지 또는 다른 변화가 필요한지 결정하고, Impact 단계에서 문제가 실제로 달라졌는지 확인합니다. 핵심은 처음부터 답을 교육으로 정해두지 않는 Solution Neutral 관점입니다.",
+    "bite_line": "교육을 잘 만드는 것보다 먼저, 교육이 필요한 문제인지 확인해야 합니다.",
+    "source_name": "ATD",
+    "source_title": "Rethinking the Lightning-Fast Needs Assessment for Today’s Talent Imperatives",
+    "source_url": "https://www.td.org/content/atd-blog/rethinking-the-lightning-fast-needs-assessment-for-today-s-talent-imperatives",
+    "tags": ["HRD Practice", "Performance Consulting", "Needs Assessment", "Root Cause"]
   }
 ]
