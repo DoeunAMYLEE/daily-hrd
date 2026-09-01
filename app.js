@@ -1,5 +1,6 @@
 
 const state = { briefings: [], current: null };
+const FEEDBACK_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwGRNgeLHQOz8M9bZ_iO0VNEOqcYu5QxtSP3VcvOvzpXPCRdKhed-8AAOmeAQdvyL2GXg/exec';
 
 const CURATED_BOLD = {
   '2026-08-31': [
@@ -106,7 +107,7 @@ function latestForToday(items){
   return eligible[0] || null;
 }
 function escapeHTML(str){
-  return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#039;'}[m]));
+  return String(str).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
 }
 function renderRichText(str, date){
   let html = escapeHTML(str);
@@ -204,24 +205,84 @@ function filterItems(query){
 }
 function ratingKey(){ return `daily-hrd-rating-${state.current?.date}`; }
 function commentKey(){ return `daily-hrd-comment-${state.current?.date}`; }
+function submittedKey(){ return `daily-hrd-feedback-submitted-${state.current?.date}`; }
 function restoreFeedback(){
   const value = localStorage.getItem(ratingKey());
   const comment = localStorage.getItem(commentKey()) || '';
-  document.querySelectorAll('#rating button').forEach(b=>b.classList.toggle('active', b.dataset.value===value));
+  const submitted = localStorage.getItem(submittedKey()) === 'true';
   const commentBox = document.getElementById('feedbackComment');
-  if(commentBox) commentBox.value = comment;
-  document.getElementById('ratingResult').textContent = value ? `${value}점으로 남겨주셨어요. 감사합니다!` : '';
-}
-function saveComment(){
-  const commentBox = document.getElementById('feedbackComment');
-  if(!commentBox) return;
-  const comment = commentBox.value.trim();
-  if(comment){
-    localStorage.setItem(commentKey(), comment);
-    showToast('코멘트를 저장했어요.');
+  const submitBtn = document.getElementById('feedbackSaveBtn');
+
+  document.querySelectorAll('#rating button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.value===value);
+    b.disabled = submitted;
+  });
+
+  if(commentBox){
+    commentBox.value = comment;
+    commentBox.disabled = submitted;
+  }
+  if(submitBtn){
+    submitBtn.disabled = submitted;
+    submitBtn.textContent = submitted ? '피드백 전송 완료' : '피드백 보내기';
+  }
+
+  const result = document.getElementById('ratingResult');
+  if(submitted){
+    result.textContent = '피드백을 보내주셨어요. 감사합니다!';
+  } else if(value){
+    result.textContent = `${value}점을 선택했어요.`;
   } else {
-    localStorage.removeItem(commentKey());
-    showToast('코멘트를 비웠어요.');
+    result.textContent = '';
+  }
+}
+async function submitFeedback(){
+  const score = localStorage.getItem(ratingKey());
+  const commentBox = document.getElementById('feedbackComment');
+  const submitBtn = document.getElementById('feedbackSaveBtn');
+
+  if(!score){
+    showToast('먼저 1~5점 중 하나를 선택해 주세요.');
+    return;
+  }
+  if(localStorage.getItem(submittedKey()) === 'true'){
+    showToast('이미 피드백을 보내주셨어요.');
+    return;
+  }
+
+  const comment = commentBox ? commentBox.value.trim() : '';
+  if(comment) localStorage.setItem(commentKey(), comment);
+  else localStorage.removeItem(commentKey());
+
+  if(submitBtn){
+    submitBtn.disabled = true;
+    submitBtn.textContent = '보내는 중...';
+  }
+
+  const payload = {
+    date: state.current.date,
+    score: Number(score),
+    comment,
+    submittedAt: new Date().toISOString()
+  };
+
+  try{
+    await fetch(FEEDBACK_ENDPOINT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type':'text/plain;charset=utf-8'},
+      body: JSON.stringify(payload),
+      keepalive: true
+    });
+    localStorage.setItem(submittedKey(), 'true');
+    restoreFeedback();
+    showToast('피드백을 보냈어요. 감사합니다!');
+  }catch(e){
+    if(submitBtn){
+      submitBtn.disabled = false;
+      submitBtn.textContent = '피드백 보내기';
+    }
+    showToast('전송하지 못했어요. 잠시 후 다시 시도해 주세요.');
   }
 }
 function showToast(text){
@@ -269,7 +330,7 @@ document.querySelectorAll('#rating button').forEach(btn=>{
     restoreFeedback();
   });
 });
-document.getElementById('feedbackSaveBtn').addEventListener('click',saveComment);
+document.getElementById('feedbackSaveBtn').addEventListener('click',submitFeedback);
 window.addEventListener('hashchange',()=>{
   const hash=location.hash.replace('#','');
   const found=state.briefings.find(x=>x.date===hash);
